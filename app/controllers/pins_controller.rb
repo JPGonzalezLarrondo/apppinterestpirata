@@ -1,5 +1,6 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /pins
   # GET /pins.json
@@ -25,6 +26,7 @@ class PinsController < ApplicationController
   # POST /pins.json
   def create
     @pin = Pin.new(pin_params)
+   
 
     respond_to do |format|
       if @pin.save
