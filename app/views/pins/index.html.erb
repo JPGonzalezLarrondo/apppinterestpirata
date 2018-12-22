@@ -6,12 +6,12 @@
       <div class="col-md-3">
         <div class="thumbnail">
           <%= pin.description %>
-          <%= image_tag(pin.photo, :class => 'img-responsive') %>
+          <%= image_tag(pin.photo.url, :class => 'img-responsive') %>
           <div class="buttons" style="margin-top:10px; margin-bottom:10px">        
-            <%= link_to 'Show', pin, :class => 'btn' %>
-            <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn' %>
+            <%= link_to 'Show', pin, :class => 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-success' %>
             <% if user_signed_in? %>
-            <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %>
+            <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-alert' %>
             <% end %>
           </div>
         </div> 
