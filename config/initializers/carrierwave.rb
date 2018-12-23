@@ -1,7 +1,7 @@
 # config/initializers/carrierwave.rb
 
 CarrierWave.configure do |config|
-  config.storage    = :s3
+  config.storage    = :aws
   config.aws_bucket = ('introrails') # for AWS-side bucket access permissions config, see section below
   config.aws_acl    = 'public-read'
 
