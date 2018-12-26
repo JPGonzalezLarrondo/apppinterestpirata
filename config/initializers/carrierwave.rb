@@ -17,8 +17,8 @@ CarrierWave.configure do |config|
   }
 
   config.aws_credentials = {
-    access_key_id:     ('AKIAISQ5A7QK6JXQE3IA'),
-    secret_access_key: ('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'),
+    access_key_id:     ('AKIAIX7K43C7IRIYNREA'),
+    secret_access_key: ('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'),
     region:            ('sa-east-1'), # Required
     stub_responses:    Rails.env.test? # Optional, avoid hitting S3 actual during tests
   }
